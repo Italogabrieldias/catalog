@@ -1,6 +1,7 @@
 package com.project.catalog.catalog.services;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.project.catalog.catalog.dto.CategoryDTO;
 import com.project.catalog.catalog.entities.Category;
 import com.project.catalog.catalog.repositories.CategoryRepository;
+import com.project.catalog.catalog.services.exceptions.EntityNotFoundExeption;
 
 @Service
 public class CategoryService {
@@ -25,4 +27,13 @@ public class CategoryService {
 
 		
 	}
+
+	@Transactional(readOnly = true)
+	public CategoryDTO findById(Long id) {
+		
+		Optional<Category> obj = repository.findById(id);
+		Category entity = obj.orElseThrow(()-> new EntityNotFoundExeption("Entity not Found"));
+		return new CategoryDTO(entity);
+	}
 }
+

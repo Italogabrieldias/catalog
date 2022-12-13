@@ -1,0 +1,17 @@
+package com.project.catalog.catalog.resource.exeptions;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+import com.project.catalog.catalog.services.exceptions.EntityNotFoundExeption;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+@ControllerAdvice
+public class ResourceExeptionHandler {
+	
+	
+	public ResponseEntity<StanderdError> entityNotFound(EntityNotFoundExeption e, HttpServletRequest request) {
+		
+	}
+}

@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\ws-project\ws-bootcamp\dscatalog-backend1-main"/>
 			<item value="C:\ws-project\dev-catalog"/>
 		</list>
 		<list key="projectNameTemplate">
