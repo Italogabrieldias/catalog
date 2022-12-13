@@ -7,15 +7,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.project.catalog.catalog.services.exceptions.EntityNotFoundExeption;
+import com.project.catalog.catalog.services.exceptions.ResourceNotFoundExeption;
 
 import jakarta.servlet.http.HttpServletRequest;
 
 @ControllerAdvice
 public class ResourceExeptionHandler {
 	
-	@ExceptionHandler(EntityNotFoundExeption.class)
-	public ResponseEntity<StandardError> entityNotFound(EntityNotFoundExeption e, HttpServletRequest request) {
+	@ExceptionHandler(ResourceNotFoundExeption.class)
+	public ResponseEntity<StandardError> entityNotFound(ResourceNotFoundExeption e, HttpServletRequest request) {
 		StandardError err = new StandardError();
 		err.setTimestamp(Instant.now());
 		err.setStatus(HttpStatus.NOT_FOUND.value());
