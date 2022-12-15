@@ -1,0 +1,9 @@
+package com.project.catalog.catalog.resource.exeptions;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+@ControllerAdvice
+public class ResourceExeptionHandler {
+
+	public ResonseEntity<StanderError>
+}

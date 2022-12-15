@@ -1,0 +1,5 @@
+package com.client.client.repositories;
+
+public class ClientRepository {
+
+}

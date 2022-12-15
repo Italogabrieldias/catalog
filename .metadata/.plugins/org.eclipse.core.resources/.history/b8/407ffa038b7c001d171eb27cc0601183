@@ -1,0 +1,5 @@
+package com.client.client.dto;
+
+public class ClientDTO {
+
+}

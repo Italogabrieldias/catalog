@@ -1,0 +1,5 @@
+package com.project.catalog.catalog.services.exceptions;
+
+public class EntityNotFoundExeption {
+
+}

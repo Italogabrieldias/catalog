@@ -1,0 +1,32 @@
+package com.client.client.services;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.client.client.dto.ClientDTO;
+
+public class ClientService {
+
+	@Transactional
+	public Page<ClientDTO> findAllPaged(PageRequest pageRequest) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public ClientDTO findByid(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public ClientDTO insert(ClientDTO dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public ClientDTO update(Long id, ClientDTO dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.client.client.resource.exeptions;
+
+public class ResiyrceExeptionHandler {
+
+}

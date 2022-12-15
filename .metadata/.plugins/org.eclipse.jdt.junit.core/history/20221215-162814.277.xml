@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AccountTests (Failed Tests first)" project="unit_aula" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="tests.entities.AccountTests" time="0.022" displayname="AccountTests" uniqueid="[engine:junit-jupiter]/[class:tests.entities.AccountTests]">
+    <testcase name="depositShouldDoNotthingWhenNegativeAmount" classname="tests.entities.AccountTests" time="0.021" displayname="depositShouldDoNotthingWhenNegativeAmount()" uniqueid="[engine:junit-jupiter]/[class:tests.entities.AccountTests]/[method:depositShouldDoNotthingWhenNegativeAmount()]"/>
+    <testcase name="depositSouldIncreaseBalanceWhenPositiveAmount" classname="tests.entities.AccountTests" time="0.0" displayname="depositSouldIncreaseBalanceWhenPositiveAmount()" uniqueid="[engine:junit-jupiter]/[class:tests.entities.AccountTests]/[method:depositSouldIncreaseBalanceWhenPositiveAmount()]"/>
+  </testsuite>
+</testrun>

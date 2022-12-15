@@ -1,0 +1,5 @@
+package com.project.catalog.catalog.dto;
+
+public class CategoryDTO {
+
+}
