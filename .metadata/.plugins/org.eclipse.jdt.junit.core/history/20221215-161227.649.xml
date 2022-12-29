@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="AccountTests" project="unit_aula" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="tests.entities.AccountTests" time="0.001" displayname="AccountTests" uniqueid="[engine:junit-jupiter]/[class:tests.entities.AccountTests]">
-    <testcase name="depositSouldIncreaseBalanceWhenPositiveAmount" classname="tests.entities.AccountTests" time="0.001" displayname="depositSouldIncreaseBalanceWhenPositiveAmount()" uniqueid="[engine:junit-jupiter]/[class:tests.entities.AccountTests]/[method:depositSouldIncreaseBalanceWhenPositiveAmount()]"/>
-  </testsuite>
-</testrun>

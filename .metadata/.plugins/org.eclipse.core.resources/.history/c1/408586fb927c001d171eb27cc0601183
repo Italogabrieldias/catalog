@@ -1,5 +1,0 @@
-package com.client.client.services.Exceptions;
-
-public class ResourceNotFoundExeption {
-
-}
