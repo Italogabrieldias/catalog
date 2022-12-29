@@ -1,9 +1,6 @@
 package com.project.catalog.catalog.services;
 
-import com.project.catalog.catalog.dto.ProductDTO;
-import com.project.catalog.catalog.dto.RoleDTO;
-import com.project.catalog.catalog.dto.UserDTO;
-import com.project.catalog.catalog.dto.UserInsertDTO;
+import com.project.catalog.catalog.dto.*;
 import com.project.catalog.catalog.entities.Product;
 import com.project.catalog.catalog.entities.Role;
 import com.project.catalog.catalog.entities.User;
@@ -77,7 +74,7 @@ public class UserService {
 	}
 
 	@Transactional
-	public UserDTO update(Long id, UserDTO dto) {
+	public UserDTO update(Long id, UserUpdateDTO dto) {
 		try {
 			@SuppressWarnings("deprecation")
 			User entity = repository.getOne(id);

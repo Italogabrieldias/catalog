@@ -2,7 +2,6 @@ package com.project.catalog.catalog.resource;
 
 import java.net.URI;
 
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,6 +18,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.project.catalog.catalog.dto.ProductDTO;
 import com.project.catalog.catalog.services.ProductService;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping(value = "/products")

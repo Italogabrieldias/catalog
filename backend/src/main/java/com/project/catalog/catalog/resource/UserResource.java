@@ -2,7 +2,9 @@ package com.project.catalog.catalog.resource;
 
 import com.project.catalog.catalog.dto.UserDTO;
 import com.project.catalog.catalog.dto.UserInsertDTO;
+import com.project.catalog.catalog.dto.UserUpdateDTO;
 import com.project.catalog.catalog.services.UserService;
+import com.project.catalog.catalog.services.validation.UserInsertValid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -10,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 
 @RestController
@@ -41,9 +44,9 @@ public class UserResource {
 	}
 
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<UserDTO> update(@PathVariable Long id, @RequestBody UserDTO dto) {
-		dto = service.update(id, dto);
-		return ResponseEntity.ok().body(dto);
+	public ResponseEntity<UserDTO> update(@PathVariable Long id,@Valid @RequestBody UserUpdateDTO dto) {
+		UserDTO newDto = service.update(id, dto);
+		return ResponseEntity.ok().body(newDto);
 
 	}
 
