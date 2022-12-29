@@ -8,14 +8,20 @@ import java.util.Set;
 
 import com.project.catalog.catalog.entities.Category;
 import com.project.catalog.catalog.entities.Product;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Positive;
 
 public class ProductDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Long id;
+	@NotBlank
 	private String name;
 	private String description;
+	@Positive
 	private Double price;
 	private String imgUrl;
+	@PastOrPresent(message = "date is not future")
 	private Instant date;
 
 	private List<CategoryDTO> categories = new ArrayList<>();

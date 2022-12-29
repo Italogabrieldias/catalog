@@ -6,11 +6,10 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
-
 @Entity
 @Table(name = "tb_user")
 public class User implements Serializable {
-    private static final long SerialVersionUID = 1l;
+    private static final long  SerialVersionUID = 1l;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
