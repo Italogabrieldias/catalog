@@ -1,15 +1,13 @@
 package com.project.catalog.catalog.services.validation;
 
-import com.project.catalog.catalog.dto.UserDTO;
-import com.project.catalog.catalog.dto.UserInsertDTO;
 import com.project.catalog.catalog.dto.UserUpdateDTO;
 import com.project.catalog.catalog.entities.User;
 import com.project.catalog.catalog.repositories.UserRepository;
 import com.project.catalog.catalog.resource.exeptions.FieldMessage;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.ArrayList;

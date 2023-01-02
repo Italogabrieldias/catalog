@@ -2,6 +2,8 @@ package com.project.catalog.catalog.resource.exeptions;
 
 import java.time.Instant;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -12,7 +14,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import com.project.catalog.catalog.services.exceptions.DataBaseException;
 import com.project.catalog.catalog.services.exceptions.ResourceNotFoundExeption;
 
-import jakarta.servlet.http.HttpServletRequest;
+
 
 @ControllerAdvice
 public class ResourceExeptionHandler {

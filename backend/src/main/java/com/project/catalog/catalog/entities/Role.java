@@ -1,9 +1,10 @@
 package com.project.catalog.catalog.entities;
 
-import jakarta.persistence.*;
-
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.io.Serializable;
 import java.util.Objects;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tb_role")

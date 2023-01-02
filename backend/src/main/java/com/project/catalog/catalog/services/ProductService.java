@@ -16,7 +16,8 @@ import com.project.catalog.catalog.repositories.ProductRepository;
 import com.project.catalog.catalog.services.exceptions.DataBaseException;
 import com.project.catalog.catalog.services.exceptions.ResourceNotFoundExeption;
 
-import jakarta.persistence.EntityNotFoundException;
+import javax.persistence.EntityNotFoundException;
+
 
 @Service
 public class ProductService {
