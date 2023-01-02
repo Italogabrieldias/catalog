@@ -1,0 +1,28 @@
+package com.project.catalog.catalog.components;
+
+import com.project.catalog.catalog.entities.User;
+import com.project.catalog.catalog.repositories.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
+import org.springframework.security.oauth2.common.OAuth2AccessToken;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
+import org.springframework.security.oauth2.provider.token.TokenEnhancer;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class JwtTokenEnhancer implements TokenEnhancer {
+    @Autowired
+    private UserRepository userRepository;
+
+    @Override
+    public OAuth2AccessToken enhance(OAuth2AccessToken accessToken, OAuth2Authentication authentication) {
+        User user = userRepository.findByEmail(authentication.getName());
+        Map<String, Object > map = new HashMap<>();
+        map.put("userFistName", user.getFirstName());
+        map.put("UserId", user.getId());
+        DefaultOAuth2AccessToken token = (DefaultOAuth2AccessToken) accessToken;
+        token.setAdditionalInformation(map);
+        return accessToken;
+    }
+}
