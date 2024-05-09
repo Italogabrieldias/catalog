@@ -38,7 +38,7 @@ Introdução a JPA e Hibernate
 
 - [JPA e Hibernate](https://www.youtube.com/watch?v=CAP1IPgeJkw)
 
-### Modelo conceitual do DSCatalog
+### Modelo conceitual do Catalog
 
 ![img](https://lh5.googleusercontent.com/7JPGI3iCFnQAPvXkVSHLGXLy5S1iJi1gZAfVG_Mrnz7YP7j1vt2ti6pk1dTG_HeSS5JK1cpftJHzDRdtuKLueYuU_ykYFDR8oJk0jT28Hcy9dRfDsX8KJKfhJVoOImOXc_LnyJKT)
 
