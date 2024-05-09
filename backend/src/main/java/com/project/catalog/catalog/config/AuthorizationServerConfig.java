@@ -18,6 +18,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 import java.util.Arrays;
 
 @Configuration
+
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
     @Value("${security.oauth2.client.client-id}")
@@ -37,7 +38,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Autowired
     private AuthenticationManager authenticationManager;
     @Autowired
-    private JwtTokenEnhancer tokenEnhancer;
+    private JwtTokenEnhancer jwtTokenEnhancer;
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
@@ -56,7 +57,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         TokenEnhancerChain chain = new TokenEnhancerChain();
-       chain.setTokenEnhancers(Arrays.asList(accessTokenConverter, tokenEnhancer));
+       chain.setTokenEnhancers(Arrays.asList(accessTokenConverter, jwtTokenEnhancer));
 
         endpoints.authenticationManager(authenticationManager)
                 .tokenStore(tokenStore)
