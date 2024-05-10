@@ -118,7 +118,7 @@
   "workbench.editor.empty.hint": "hidden",
   "update.showReleaseNotes": false,
   "security.promptForLocalFileProtocolHandling": false,
-  "workbench.activityBar.location": "hidden",
+  "workbench.activityBar.location": "default",
   "apc.activityBar": {
     "position": "bottom",
     "hideSettings": true,
