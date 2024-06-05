@@ -6,10 +6,11 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-md navbar-dark bg-primary main-nav">
       <div className="container-fluid">
         <a href="link" className="nav-logo-text">
-          <h4>Catalog</h4>
+          <h4>Game Catalog</h4>
         </a>
 
         <button
+        
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
