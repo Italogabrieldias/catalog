@@ -1,45 +1,121 @@
-## CRUD
+# Catalog API
 
-### Competências
+Aplicação full stack de catálogo de produtos desenvolvida para praticar a construção de APIs REST com Java e Spring Boot, persistência com JPA/Hibernate e integração com uma interface React.
 
-- Criar projeto Spring Boot
-- Criar monorepo Git
-- Organizar o projeto em camadas
-  * Controlador REST
-  * Serviço
-  * Acesso a dados (Repository)
-- Criar entidades
-- Configurar perfil de teste do projeto
-- Seeding da base de dados
-- Criar web services REST
-  * Parâmetros de rota @PathVariable
-  * Parâmetros de requisição @RequestParam
-  * Corpo de requisição @RequestBody
-  * Resposta da requisição ResponseEntity<T>
-- Padrão DTO
-- CRUD completo
-- Tratamento de exceções
-- Postman (coleções, ambientes)
-- Dados de auditoria
-- Paginação de dados
-- Associações entre entidades (N-N)
+## Visão geral
 
-### Vídeos auxiliares
+O projeto permite consultar e administrar produtos, categorias e usuários. O backend segue uma arquitetura em camadas, separando recursos REST, regras de negócio e acesso a dados.
 
-Conceitos sobre desenvolvimento web e REST
+## Tecnologias
 
-- [Conceitos web e REST](https://www.youtube.com/watch?v=b8uLFfzcVQ8)
+### Backend
 
-Análise do app da Semana DevSuperior 1.0
+- Java 17
+- Spring Boot
+- Spring Web
+- Spring Data JPA
+- Hibernate
+- Spring Security e OAuth2/JWT
+- Bean Validation
+- PostgreSQL e H2
+- Maven
+- JUnit 5
 
-- [DevSuperior 1.0 - análise](https://www.youtube.com/watch?v=PfYifUFmXk8)
+### Frontend
 
-Introdução a JPA e Hibernate
+- React
+- TypeScript
+- React Router
+- Bootstrap e Sass
 
-- [JPA e Hibernate](https://www.youtube.com/watch?v=CAP1IPgeJkw)
+## Funcionalidades
 
-### Modelo conceitual do Catalog
+- CRUD de produtos, categorias e usuários
+- Paginação de resultados
+- DTOs para transferência de dados
+- Validação de dados de entrada
+- Tratamento centralizado de exceções
+- Relacionamentos entre entidades
+- Autenticação e autorização com token JWT
+- Perfil de testes com banco H2
+- Carga inicial de dados para desenvolvimento
 
-![img](https://lh5.googleusercontent.com/7JPGI3iCFnQAPvXkVSHLGXLy5S1iJi1gZAfVG_Mrnz7YP7j1vt2ti6pk1dTG_HeSS5JK1cpftJHzDRdtuKLueYuU_ykYFDR8oJk0jT28Hcy9dRfDsX8KJKfhJVoOImOXc_LnyJKT)
+## Arquitetura do backend
 
+```text
+resource -> service -> repository -> database
+              |
+             dto
+```
 
+- `resource`: endpoints e respostas HTTP
+- `service`: regras de negócio e casos de uso
+- `repository`: persistência com Spring Data JPA
+- `dto`: contratos de entrada e saída da API
+- `entities`: modelo de domínio
+
+## Estrutura do repositório
+
+```text
+catalog/
+|-- backend/    # API Java e Spring Boot
+`-- frontend/   # Interface React e TypeScript
+```
+
+## Como executar o backend
+
+### Requisitos
+
+- Java 17
+- Maven ou Maven Wrapper
+
+Na pasta `backend`, execute:
+
+```bash
+./mvnw spring-boot:run
+```
+
+No Windows:
+
+```powershell
+mvnw.cmd spring-boot:run
+```
+
+Por padrão, o projeto utiliza o perfil de testes com banco H2 em memória. A API fica disponível em `http://localhost:8080`.
+
+## Endpoints principais
+
+| Método | Endpoint | Descrição |
+| --- | --- | --- |
+| GET | `/products` | Lista produtos com paginação |
+| GET | `/products/{id}` | Consulta um produto |
+| POST | `/products` | Cadastra um produto |
+| PUT | `/products/{id}` | Atualiza um produto |
+| DELETE | `/products/{id}` | Remove um produto |
+| GET | `/categories` | Lista categorias |
+| GET | `/users` | Lista usuários |
+
+## Testes
+
+Na pasta `backend`, execute:
+
+```bash
+./mvnw test
+```
+
+Os testes existentes validam o contexto da aplicação e operações de persistência do catálogo.
+
+## Próximas evoluções
+
+- Migrar a segurança para o modelo atual do Spring Security
+- Ampliar testes unitários e de integração
+- Documentar a API com OpenAPI/Swagger
+- Criar ambiente local com Docker Compose
+- Adicionar integração contínua com GitHub Actions
+- Publicar uma demonstração da aplicação
+
+## Autor
+
+Desenvolvido por [Italo Dias](https://github.com/Italogabrieldias).
+
+- [LinkedIn](https://www.linkedin.com/in/ital0dias/)
