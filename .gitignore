@@ -1,0 +1,41 @@
+# IDEs and editors
+.idea/
+.vscode/
+*.iml
+
+# Java and Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/timing.properties
+
+# Node.js and frontend builds
+node_modules/
+build/
+dist/
+coverage/
+.npm/
+.yarn/cache/
+.yarn/unplugged/
+.pnp.*
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs
+*.log
+logs/
+
+# Operating systems
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*~
